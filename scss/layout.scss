@@ -1,0 +1,71 @@
+/* variables */
+$common-margin : 10px;
+
+/* calculate the width of the column */
+@function calculate-width($containerWidth, $number-of-cols :0 ){
+	@return ($containerWidth - (($number-of-cols - 1) * $common-margin)) / $number-of-cols;
+}
+
+
+
+.container{
+	margin: 0 auto;
+	border:1px solid red;
+	
+	@media (min-width: $medium-width){
+		width:$medium-width;	
+	}
+	
+	@media (min-width: $large-width){
+		width:$large-width;	
+	}
+	
+	
+}
+
+.col-container{
+	@include clearfix;
+	
+}
+
+.col{
+	margin-top: $common-margin;
+	padding-top: $common-margin;
+	border-top:1px solid blue;
+	min-height:200px;
+	&:first-child{ margin-top:0; padding-top:0; border:none; }
+	
+	@media (min-width:$medium-width){
+		float:left;	
+		margin-top:0;
+		padding-top:0;
+		border:none;
+	}
+}
+
+.col-1{ background:purple; width:100%; }
+
+.col-2{
+	$number-of-cols : 2;
+	background:orange;
+	
+	@media (min-width:$large-width){
+		
+		width: calculate-width($large-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	
+}
+
+.col-3{
+	$number-of-cols : 3;
+	background: green;
+	@media (min-width:$large-width){
+		
+		width: calculate-width($large-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	
+}

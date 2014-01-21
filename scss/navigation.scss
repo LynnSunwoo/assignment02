@@ -1,0 +1,13 @@
+.main-nav{
+	ul{ padding:0; margin:0; }
+	li{ margin-top:1em; }
+	li:first-child{ margin-top:0; }
+	a{ display:block; background:#ececec; padding:1em; text-align:center; }
+	
+	@media (min-width:$medium-width){
+		ul { @include clearfix; }
+		li { float:left; margin-left:1em; margin-top:0; }
+		li:first-child{ margin-left:0; }
+		a{ padding:0.5em 1em; text-align:left; }	
+	}
+}
