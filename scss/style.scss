@@ -7,14 +7,14 @@
 /* -- variables -- */
 
 /*Screen sizes*/
-$small-width : 568px;
+$small-width : 480px;
 $medium-width : 768px;
 $large-width: 1024px;
 $xlarge-width: 1400px;
 
 
-$primary-font : arial;
-$secondary-font : arial;
+$primary-font : 'Raleway', sans-serif;
+$secondary-font : 'Roboto', sans-serif;
 
 $color1: red;
 $color2: blue;
@@ -28,8 +28,8 @@ $color5: black;
 /* -- Layout Components -- */
 @import 'layout';
 
-/* -- Banner Components -- */
-.banner{
-	height:300px;
-	background:#000;
-}
+/* text formats */
+ 
+h1,h2,h3,h4,p{padding:0;margin:0; text-style: none; font-weight:lighter}     
+h2 { font-family: $primary-font;}        
+a, a:hover, a:after {text-decoration: none; color: black;}

@@ -1,51 +1,46 @@
 /* variables */
-$common-margin : 10px;
+$common-margin : 20px;
 
 /* calculate the width of the column */
 @function calculate-width($containerWidth, $number-of-cols :0 ){
 	@return ($containerWidth - (($number-of-cols - 1) * $common-margin)) / $number-of-cols;
 }
 
-body{ border: 1px solid red; }
+body{  }
 
+/* - Main colums  - */
 .container{
 	margin: 0 auto;
-	border:1px solid red;
-	background: red;
-	
+	padding: 10px;	
 	/* mobile view */
 	@media (min-width: $small-width){
-		width: $small-width;
-		background: blue;		
+		width: $small-width;		 		
 	}	
 	@media (min-width: $medium-width){
-		width:$medium-width;
-		background: green;		
+		width:$medium-width;		 		
 	}
 	@media (min-width: $large-width){
-		width:$large-width;
-		background: $color1;		
+		width:$large-width;		  		
 	}
 	@media (min-width: $xlarge-width){
-		width:$xlarge-width;
-		background: $color1;		
-	}
+		width:$xlarge-width;	 		
+	} 
 	
 }
 
 .col-container{
 	@include clearfix;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 }
 
 .col{
+	
 	margin-top: $common-margin;
 	padding-top: $common-margin;
-	border-top:1px solid blue;
 	min-height:200px;
 	&:first-child{ margin-top:0; padding-top:0; border:none; }
 	
-	@media (min-width:$small-width){
+	@media (min-width:$medium-width){
 		float:left;	
 		margin-top:0;
 		padding-top:0;
@@ -58,13 +53,7 @@ body{ border: 1px solid red; }
 .col-2{
 	$number-of-cols : 2;
 	background:orange;
-	
-	@media (min-width:$small-width){		
-		width: calculate-width($small-width,$number-of-cols);
-		margin-left: $common-margin;
-		&:first-child{ margin-left:0; }
-	}
-	
+		
 	@media (min-width:$medium-width){		
 		width: calculate-width($medium-width,$number-of-cols);
 		margin-left: $common-margin;
@@ -85,13 +74,27 @@ body{ border: 1px solid red; }
 
 .col-3{
 	$number-of-cols : 3;
-	background: blue;
 	
-	@media (min-width:$small-width){		
-		width: calculate-width($small-width,$number-of-cols);
+	@media (min-width:$medium-width){		
+		width: calculate-width($medium-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}	
+	@media (min-width:$large-width){		
+		width: calculate-width($large-width,$number-of-cols);
 		margin-left: $common-margin;
 		&:first-child{ margin-left:0; }
 	}
+	@media (min-width:$xlarge-width){		
+		width: calculate-width($xlarge-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+}
+
+.col-5{
+	$number-of-cols : 5;
+	background: teal;
 	
 	@media (min-width:$medium-width){		
 		width: calculate-width($medium-width,$number-of-cols);
@@ -111,6 +114,70 @@ body{ border: 1px solid red; }
 	}
 }
 
-/* text formats */
+/* details */
+div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 
-h2 { font-family: $primary-font ; @include font-size(22); }
+/* - inside of the colum, articles - */
+
+.defer-image{
+	
+	@media (min-width:$small-width){		
+		width: 50%;
+		float: left;
+	}
+	@media (min-width:$medium-width){		
+		width: 100%;
+		float: none;
+	}
+}
+.article-holder{
+	margin-top: 0;
+	padding-top: 0;
+	@media (min-width:$small-width){		
+		width: 50%;
+		float: left;
+	}
+	@media (min-width:$medium-width){		
+		width: 100%;
+		float: none;
+	}
+}
+
+.article-tag {
+	font-family :$primary-font;
+	font-weight: bold;
+	@include font-size(8);
+	text-transform: uppercase;
+	@media (min-width: $small-width){
+				 		
+	}	
+	@media (min-width: $medium-width){
+		width:$medium-width;		 		
+	}
+	@media (min-width: $large-width){
+		width:$large-width;		  		
+	}
+	@media (min-width: $xlarge-width){
+		width:$xlarge-width;	 		
+	} 
+}
+
+.articleText-holder {
+	padding-top: 10px;
+	clear: both;
+}
+.article-info {@include font-size(8); font-weight: lighter; line-height:20px;}
+
+.article-title { font-weight: bold; }
+
+.article-text { line-height: 25px; font-weight: lighter; padding-bottom: 10px; border-bottom: 2px solid black;}
+
+
+
+/* -- the banner -- */
+.banner{
+	min-height:300px;
+	background:#000;
+}
+
+div.container:nth-child(1) { padding-top: 40px;}
