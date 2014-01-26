@@ -4,7 +4,7 @@
 	li:first-child{ margin-top:0; }
 	a{ display:block; background:#ececec; padding:1em; text-align:center; }
 	
-	@media (min-width:$medium-width){
+	@media (min-width:$small-width){
 		ul { @include clearfix; }
 		li { float:left; margin-left:1em; margin-top:0; }
 		li:first-child{ margin-left:0; }

@@ -6,25 +6,30 @@
 
 /* -- variables -- */
 
-$large-width : 1020px;
-$medium-width : 500px;
+/*Screen sizes*/
+$small-width : 568px;
+$medium-width : 768px;
+$large-width: 1024px;
+$xlarge-width: 1400px;
+
 
 $primary-font : arial;
 $secondary-font : arial;
 
-body{ border: 1px solid red; }
-
-h2 { font-family: $primary-font ; @include font-size(22); }
-
-/* -- Banner Components -- */
-.banner{
-	height:300px;
-	background:#000;
-}
-
+$color1: red;
+$color2: blue;
+$color3: green;
+$color4: pink;
+$color5: black;
 
 /* -- Navigation components -- */
 @import 'navigation';
 
 /* -- Layout Components -- */
 @import 'layout';
+
+/* -- Banner Components -- */
+.banner{
+	height:300px;
+	background:#000;
+}

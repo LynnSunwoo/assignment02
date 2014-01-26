@@ -6,23 +6,36 @@ $common-margin : 10px;
 	@return ($containerWidth - (($number-of-cols - 1) * $common-margin)) / $number-of-cols;
 }
 
+body{ border: 1px solid red; }
+
 .container{
 	margin: 0 auto;
 	border:1px solid red;
+	background: red;
 	
+	/* mobile view */
+	@media (min-width: $small-width){
+		width: $small-width;
+		background: blue;		
+	}	
 	@media (min-width: $medium-width){
-		width:$medium-width;	
+		width:$medium-width;
+		background: green;		
 	}
-	
 	@media (min-width: $large-width){
-		width:$large-width;	
+		width:$large-width;
+		background: $color1;		
+	}
+	@media (min-width: $xlarge-width){
+		width:$xlarge-width;
+		background: $color1;		
 	}
 	
 }
 
 .col-container{
 	@include clearfix;
-	
+	margin-bottom: 10px;
 }
 
 .col{
@@ -32,7 +45,7 @@ $common-margin : 10px;
 	min-height:200px;
 	&:first-child{ margin-top:0; padding-top:0; border:none; }
 	
-	@media (min-width:$medium-width){
+	@media (min-width:$small-width){
 		float:left;	
 		margin-top:0;
 		padding-top:0;
@@ -46,23 +59,58 @@ $common-margin : 10px;
 	$number-of-cols : 2;
 	background:orange;
 	
-	@media (min-width:$large-width){
-		
-		width: calculate-width($large-width,$number-of-cols);
+	@media (min-width:$small-width){		
+		width: calculate-width($small-width,$number-of-cols);
 		margin-left: $common-margin;
 		&:first-child{ margin-left:0; }
 	}
 	
+	@media (min-width:$medium-width){		
+		width: calculate-width($medium-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	
+	@media (min-width:$large-width){		
+		width: calculate-width($large-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	@media (min-width:$xlarge-width){		
+		width: calculate-width($xlarge-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
 }
 
 .col-3{
 	$number-of-cols : 3;
-	background: green;
-	@media (min-width:$large-width){
-		
-		width: calculate-width($large-width,$number-of-cols);
+	background: blue;
+	
+	@media (min-width:$small-width){		
+		width: calculate-width($small-width,$number-of-cols);
 		margin-left: $common-margin;
 		&:first-child{ margin-left:0; }
 	}
 	
+	@media (min-width:$medium-width){		
+		width: calculate-width($medium-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	
+	@media (min-width:$large-width){		
+		width: calculate-width($large-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
+	@media (min-width:$xlarge-width){		
+		width: calculate-width($xlarge-width,$number-of-cols);
+		margin-left: $common-margin;
+		&:first-child{ margin-left:0; }
+	}
 }
+
+/* text formats */
+
+h2 { font-family: $primary-font ; @include font-size(22); }
