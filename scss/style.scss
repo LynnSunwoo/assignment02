@@ -1,88 +1,35 @@
+/* --- Normalize -- */
+@import 'normalize';
+
 /* --- Mixins -- */
-@mixin clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
+@import 'mixin';
+
+/* -- variables -- */
+
+/*Screen sizes*/
+$small-width : 480px;
+$medium-width : 768px;
+$large-width: 1024px;
+$xlarge-width: 1400px;
 
 
-body{ border: 1px solid red; }
+$primary-font : 'Raleway', sans-serif;
+$secondary-font : 'Roboto', sans-serif;
 
-/* -- Banner Components -- */
-.banner{
-	height:300px;
-	background:#000;
-}
-
+$color1: red;
+$color2: blue;
+$color3: green;
+$color4: pink;
+$color5: black;
 
 /* -- Navigation components -- */
-.main-nav{
-	ul{ padding:0; margin:0; }
-	li{ margin-top:1em; }
-	li:first-child{ margin-top:0; }
-	a{ display:block; background:#ececec; padding:1em; text-align:center; }
-	
-	@media (min-width:40em){
-		ul { @include clearfix; }
-		li { float:left; margin-left:1em; margin-top:0; }
-		li:first-child{ margin-left:0; }
-		a{ padding:0.5em 1em; text-align:left; }	
-	}
-}
+@import 'navigation';
 
 /* -- Layout Components -- */
-.container{
-	margin: 0 auto;
-	border:1px solid red;
-	
-	@media (min-width:40em){
-		width:40em;
-	}
-	
-	@media (min-width: 55em){
-		width:55em;	
-	}
-}
+@import 'layout';
 
-.col-container{
-	@include clearfix;
-}
-.col{
-	margin-top:1em;
-	padding-top:1em;
-	border-top:1px solid blue;
-	min-height:200px;
-	&:first-child{ margin-top:0; padding-top:0; border:none; }
-	
-	@media (min-width:40em){
-		float:left;	
-		margin-top:0;
-		padding-top:0;
-		border:none;
-	}
-}
-
-.col-1{ background:purple; width:100%; }
-
-.col-2{
-	background:orange;
-	@media (min-width:40em){
-		width:48.75%;
-		margin-left:2.5%;
-		&:first-child{ margin-left:0; }
-	}
-}
-
-.col-3{
-	background:blue;
-	@media (min-width:40em){
-		width:32%;
-		margin-left:2%;
-		&:first-child{ margin-left:0; }
-	}
-}
+/* text formats */
+ 
+h1,h2,h3,h4,p{padding:0;margin:0; text-style: none; font-weight:lighter}     
+h2 { font-family: $primary-font;}        
+a, a:hover, a:after {text-decoration: none; color: black;}

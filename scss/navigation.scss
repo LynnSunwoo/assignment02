@@ -1,0 +1,26 @@
+
+.topNav-container { overflow: auto; height: 60px; position: relative; padding-top: 25px; border-bottom: 2px solid lightgrey;
+	@media (min-width:$small-width){
+		height: 50px;
+		padding-top:15px;	
+	}
+}
+
+
+.main-nav, .social-nav{
+	
+	ul{ padding:0; margin:0; }
+	li{ margin-top:2em; list-style: none; }
+	li:first-child{ margin-top:0; }
+	a{ display:block; background:#ececec; padding:1em; text-align:center; }
+	
+	@media (min-width:$small-width){
+		
+		ul { @include clearfix; }
+		li { float:left; margin-left:1em; margin-top:0; }
+		li:first-child{ margin-left:0; }
+		a{ padding:0.5em 1em; text-align:left; }	
+	}
+}
+.main-nav{float: left }
+.social-nav { float:right;}
