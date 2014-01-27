@@ -37,7 +37,7 @@ body{  }
 	
 	margin-top: $common-margin;
 	padding-top: $common-margin;
-	min-height:250px;
+	min-height:1px;
 	&:first-child{ margin-top:0; padding-top:0; border:none; }
 	
 	@media (min-width:$medium-width){
@@ -162,7 +162,7 @@ div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 
 .article-title { font-weight: bold; }
 
-.article-text { line-height: 25px; font-weight: lighter; padding-bottom: 10px; border-bottom: 2px solid black;}
+.article-text { line-height: 25px; font-weight: lighter; padding-bottom: 10px; /*border-bottom: 2px solid $color5;*/}
 
 
 
@@ -176,4 +176,9 @@ div.container:nth-child(1) { padding-top: 40px;}
 
 
 /* main article */
-.main_article { width: 50%; float: left;}
+.main_article { float: left;}
+.main_articleImg { width: 66%; margin-right: 2%;}
+.main_articleText { width: 32%;}
+div.articleText-holder:nth-child(2) > p:nth-child(1) { border-bottom: none;}
+div.container:nth-child(2) > div:nth-child(1) { padding-bottom: 0px; margin-bottom: 10px;}
+div.container:nth-child(2) > div:nth-child(2) > div:nth-child(1) { height: 2px; background-color: $color5; padding: 0; margin: 0; }
