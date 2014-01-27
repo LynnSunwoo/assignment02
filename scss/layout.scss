@@ -30,14 +30,14 @@ body{  }
 
 .col-container{
 	@include clearfix;
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
 .col{
 	
 	margin-top: $common-margin;
 	padding-top: $common-margin;
-	min-height:200px;
+	min-height:250px;
 	&:first-child{ margin-top:0; padding-top:0; border:none; }
 	
 	@media (min-width:$medium-width){
@@ -48,7 +48,7 @@ body{  }
 	}
 }
 
-.col-1{ background:purple; width:100%; }
+.col-1{  width:100%; }
 
 .col-2{
 	$number-of-cols : 2;
@@ -118,14 +118,9 @@ body{  }
 div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 
 /* - inside of the colum, articles - */
-
 .defer-image{
 	
-	@media (min-width:$small-width){		
-		width: 50%;
-		float: left;
-	}
-	@media (min-width:$medium-width){		
+		@media (min-width:$medium-width){		
 		width: 100%;
 		float: none;
 	}
@@ -134,13 +129,10 @@ div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 	margin-top: 0;
 	padding-top: 0;
 	@media (min-width:$small-width){		
-		width: 50%;
-		float: left;
-	}
-	@media (min-width:$medium-width){		
 		width: 100%;
 		float: none;
 	}
+	
 }
 
 .article-tag {
@@ -181,3 +173,7 @@ div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 }
 
 div.container:nth-child(1) { padding-top: 40px;}
+
+
+/* main article */
+.main_article { width: 50%; float: left;}
