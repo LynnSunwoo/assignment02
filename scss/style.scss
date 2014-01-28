@@ -10,7 +10,7 @@
 $small-width : 600px;
 $medium-width : 768px;
 $large-width: 1024px;
-$xlarge-width: 1400px;
+$xlarge-width: 1300px;
 
 
 $primary-font : 'Raleway', sans-serif;
@@ -30,6 +30,7 @@ $color5: black;
 
 /* text formats */
  
-h1,h2,h3,h4,p{padding:0;margin:0; text-style: none; font-weight:lighter}     
+h1,h2,h3,h4,p{padding:0;margin:0; text-style: none; font-weight:lighter}
+    
 h2 { font-family: $primary-font;}        
 a, a:hover, a:after {text-decoration: none; color: black;}
