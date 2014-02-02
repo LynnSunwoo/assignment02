@@ -173,7 +173,9 @@ div.container:nth-child(2) > div:nth-child(1) { margin-top: 20px;}
 }
 
 div.container:nth-child(1) { padding-top: 40px;}
-
+.BDOtitle1 { float: left; color: white; }
+.BDOtitle2 { float: right; }
+.BDOtitle2 a { color: white;}
 
 /* main article */
 .main_article {
@@ -203,3 +205,25 @@ div.articleText-holder:nth-child(2) > p:nth-child(1) { border-bottom: none;}
 div.container:nth-child(2) > div:nth-child(1) { padding-bottom: 0px; margin-bottom: 10px;}
 div.container:nth-child(2) > div:nth-child(2) > div:nth-child(1) { height: 1px; background-color: #CCC; padding: 0; margin: 0; }
 div.articleText-holder:nth-child(2) > p:nth-child(1) { @include font-size(10); line-height: 24px;}
+
+/* most kitty stories and upcoming aside */
+
+.Most_main { 
+	float: left;
+	width: 65%;
+	border-right: 1px solid lightgrey;
+}
+
+.Most_aside {
+	float: left;
+	width: 34%; 
+}
+
+.purrArticle { width: 95%; border-bottom: 1px solid lightgrey; @include clearfix; padding-bottom: 20px;padding-top: 20px;}
+
+
+.purr_articleImg { width : 40%; float: left;}
+.purr_articleText { padding-left:2%;width: 58%;float: left;}
+
+.upArticle { width: 92%; float: right; padding-bottom: 10px;padding-top: 20px; }
+.upArticle h2 {@include font-size(10);}
