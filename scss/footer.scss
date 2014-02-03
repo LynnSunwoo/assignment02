@@ -1,0 +1,126 @@
+footer {
+	background-color : $color4;
+	padding-bottom: 20px;
+	.social-nav li a {color :$color5;}
+}
+
+nav.social-nav:nth-child(1) { float: left;}
+
+.footer-container { @include clearfix;}
+
+
+.footerPart1 { float:left; width:  45%; padding-right: 5%; 	
+	@media (min-width: $small-width){
+		width:  45%; padding-left: 5%;
+		padding-right: 0%; 	 		
+	}
+
+	@media (min-width: $medium-width){
+		width: 60%;	
+		 padding-right:2%; 		 padding-left: 0%; 	
+	}	
+	@media (min-width: $large-width){
+		 width: 42%;  	
+		  padding-right:2%;	
+	}
+	}
+
+.textbox { float:left; width:100%;
+	@media (min-width: $small-width){
+	width:100%;
+	}	
+	@media (min-width: $medium-width){
+	width: 60%;
+	}
+
+}
+.imagebox {width: 40%; float:left; display: none;
+	@media (min-width: $small-width){
+	display: none;
+	}	
+	@media (min-width: $medium-width){
+	display: block;
+	width: 40%;
+	}
+}
+.imagebox img { margin-top: -95px; margin-left: -55px;}
+
+.footerPart2 { float:left; width: 48%;	 
+@media (min-width: $small-width){
+		width: 48%;		
+	}
+@media (min-width: $medium-width){
+		width: 38%;	
+		 padding-right:0%; 		
+	}
+@media (min-width: $large-width){
+		 width: 30%;	
+		  padding-right:2%;		
+	}	
+	}
+
+.footerPart3 { float:left; width: 100%; padding-left: 20px;padding-top: 20px;
+		p{display:none;}
+	@media (min-width: $small-width){
+		width: 100%;
+		p{display:none;}		
+	}
+	@media (min-width: $large-width){
+		  width: 22%;	
+		  p{display: block;}	
+	}
+	}
+
+.footerPart3 div { padding-left: 55px; height: 45px; line-height: 33px;float: left;	
+	@media (min-width: $small-width){
+		float: left;		
+	}
+	@media (min-width: $large-width){float: none;	
+		 padding-left: 35px; height: 45px; line-height: 33px;	
+	}}
+
+#twitter {
+	background-image: url('../images/twit_normal.png');
+	background-repeat: no-repeat;
+	&:hover {
+			background-image: url('../images/twit.png');
+			color : $color3;
+	}
+}
+ 
+#tumblr {
+	background-image: url('../images/twitter_normal.png');
+	background-repeat: no-repeat;
+	&:hover {
+			background-image: url('../images/twitter.png');
+			color : $color3;
+	}
+}
+#facebook {
+	background-image: url('../images/facebook_normal.png');
+	background-repeat: no-repeat;
+	&:hover {
+			background-image: url('../images/facebook.png');
+			color : $color3;
+	}
+	
+}
+#google {
+	background-image: url('../images/google.png');
+	background-repeat: no-repeat;
+	&:hover {
+			color : $color3;
+	}
+	
+}
+#rss {
+	background-image: url('../images/rss_normal.png');
+	background-repeat: no-repeat;
+	&:hover {
+			background-image: url('../images/rss.png');
+			color : $color3;
+	}
+	
+}
+
+div.header_container:nth-child(2) { border-top: 1px solid grey;}

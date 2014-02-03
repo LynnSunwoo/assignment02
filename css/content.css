@@ -1,28 +1,24 @@
 /*
-Syntax error: Undefined variable: "$small-width".
-        on line 16 of scss/layout.scss
+Syntax error: Undefined variable: "$secondary-font".
+        on line 9 of scss/content.scss
 
-11: /* - Main colums  - *\/
+4: /* calculate the width of the column *\/
+5: @function calculate-width($containerWidth, $number-of-cols :0 ){
+6: 	@return ($containerWidth - (($number-of-cols - 1) * $common-margin)) / $number-of-cols;
+7: }
+8: 
+9: body{ font-family: $secondary-font; }
+10: 
+11: /* - Main colums and main layout  - *\/
 12: .container{
 13: 	margin: 0 auto;
 14: 	padding: 10px;	
-15: 	/* mobile view *\/
-16: 	@media (min-width: $small-width){
-17: 		width: $small-width;		 		
-18: 	}	
-19: 	@media (min-width: $medium-width){
-20: 		width:$medium-width;		 		
-21: 	}
 
 Backtrace:
-scss/layout.scss:16
+scss/content.scss:9
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/variable.rb:49:in `_perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/node.rb:40:in `perform'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:398:in `block in run_interp_no_strip'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:396:in `map'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:396:in `run_interp_no_strip'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:406:in `run_interp'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:360:in `visit_media'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -53,17 +49,15 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:235:in `watch'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin.rb:107:in `method_missing'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/exec.rb:463:in `watch_or_update'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/exec.rb:326:in `process_result'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/exec.rb:41:in `parse'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/exec.rb:21:in `parse!'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/bin/sass:13:in `<top (required)>'
-C:/Ruby193/bin/sass:23:in `load'
-C:/Ruby193/bin/sass:23:in `<main>'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:283:in `block in watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$small-width\".\A         on line 16 of scss/layout.scss\A \A 11: /* - Main colums  - */\A 12: .container{\A 13: 	margin: 0 auto;\A 14: 	padding: 10px;	\A 15: 	/* mobile view */\A 16: 	@media (min-width: $small-width){\A 17: 		width: $small-width;		 		\A 18: 	}	\A 19: 	@media (min-width: $medium-width){\A 20: 		width:$medium-width;		 		\A 21: 	}"; }
+  content: "Syntax error: Undefined variable: \"$secondary-font\".\A         on line 9 of scss/content.scss\A \A 4: /* calculate the width of the column */\A 5: @function calculate-width($containerWidth, $number-of-cols :0 ){\A 6: 	@return ($containerWidth - (($number-of-cols - 1) * $common-margin)) / $number-of-cols;\A 7: }\A 8: \A 9: body{ font-family: $secondary-font; }\A 10: \A 11: /* - Main colums and main layout  - */\A 12: .container{\A 13: 	margin: 0 auto;\A 14: 	padding: 10px;	"; }
