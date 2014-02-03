@@ -1,17 +1,19 @@
 /*
 Syntax error: Undefined variable: "$color4".
-        on line 2 of scss/footer.scss
+        on line 4 of scss/footer.scss
 
-1: footer {
-2: 	background-color : $color4;
-3: 	padding-bottom: 20px;
-4: 	.social-nav li a {color :$color5;}
-5: }
-6: 
-7: nav.social-nav:nth-child(1) { float: left;}
+1: /* footer *\/
+2: 
+3: footer {
+4: 	background-color : $color4;
+5: 	padding-bottom: 20px;
+6: 	.social-nav li a {color :$color5;}
+7: }
+8: 
+9: nav.social-nav:nth-child(1) { float: left;}
 
 Backtrace:
-scss/footer.scss:2
+scss/footer.scss:4
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/variable.rb:49:in `_perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/node.rb:40:in `perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -56,4 +58,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.14/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color4\".\A         on line 2 of scss/footer.scss\A \A 1: footer {\A 2: 	background-color : $color4;\A 3: 	padding-bottom: 20px;\A 4: 	.social-nav li a {color :$color5;}\A 5: }\A 6: \A 7: nav.social-nav:nth-child(1) { float: left;}"; }
+  content: "Syntax error: Undefined variable: \"$color4\".\A         on line 4 of scss/footer.scss\A \A 1: /* footer */\A 2: \A 3: footer {\A 4: 	background-color : $color4;\A 5: 	padding-bottom: 20px;\A 6: 	.social-nav li a {color :$color5;}\A 7: }\A 8: \A 9: nav.social-nav:nth-child(1) { float: left;}"; }
